@@ -1,0 +1,44 @@
+Package: documentosbr
+Type: Package
+Title: Validate Brazilian Administrative Registers - Valida documentos 
+Version: 0.1.3
+Authors@R: c(
+    person(
+      "Gustavo",
+      "Coelho",
+      role=c("aut"),
+      email="gustavo.coelho@ipea.gov.br"
+      ),
+    person(
+      "Lucas","Mation", 
+      role = c("aut"),
+      comment = c(ORCID = "0000-0002-7461-932X")
+      ),
+    person(
+      "Rodrigo", "Borges",
+      email = "rodrigoesborges@gmail.com",
+      role = c("ctb","cre"),
+      comment = c(ORCID = "0000-0003-2076-1424")
+      ),
+    person("Ipea - Institue for Applied Economic Research", role = c("cph", "fnd"))
+    )
+Maintainer: Rodrigo Borges <rodrigo.borges@ipea.gov.br>
+Description: Contains functions to validate administrative register as 
+             CPF (Cadastro de Pessoa Fisica), CNPJ (Cadastro de Pessoa Juridica), PIS (Programa de Integracao Social),
+             CNES (Cadastro Nacional de Saude). 
+             It can check individual registers or help creating a table summarizing validity of a set.
+License: GPL-3
+Encoding: UTF-8
+LazyData: LazyData: true
+URL: https://github.com/ipea/documentosbr
+BugReports: https://github.com/ipea/documentosbr/issues/
+Suggests:
+    testthat,
+    knitr,
+    covr,
+    rmarkdown
+RoxygenNote: 7.3.2
+Depends: R (>= 3.0)
+LinkingTo: Rcpp, BH
+Imports: Rcpp, bit64, stringr, data.table
+VignetteBuilder: knitr

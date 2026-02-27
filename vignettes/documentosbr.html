@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="Rodrigo Borges" />
+
+<meta name="date" content="2026-02-27" />
+
+<title>Introduction to documentosbr / Introdução ao documentosbr</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Introduction to documentosbr / Introdução
+ao documentosbr</h1>
+<h4 class="author">Rodrigo Borges</h4>
+<h4 class="date">2026-02-27</h4>
+
+
+
+<style>
+.column {float: left;width: 50%;padding: 10px;}
+.row:after {content: "";display: table;clear: both;}
+@media screen and (max-width: 600px) {
+.column { width: 100%; }}
+body { text-align: justify; }
+.logo-container {text-align: center;margin-bottom: 20px;}
+</style>
+<div class="logo-container">
+<img role="img" aria-label="documentosbr logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iW2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXShodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZykiIHZpZXdCb3g9IjAgMCAxODEuNjcgMjEwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIzMSI+CiAgPCEtLSBPdXRlciBIZXhhZ29uIChEYXJrIEJvcmRlcikgLS0+CiAgPHBvbHlnb24gcG9pbnRzPSI5MC44MyAxLjUgMTc5LjY3IDUyLjUgMTc5LjY3IDE1Ny41IDkwLjgzIDIwOC41IDIgMTU3LjUgMiA1Mi41IDkwLjgzIDEuNSIgZmlsbD0iIzJjM2U1MCIgc3Ryb2tlPSIjMWEyNTJmIiBzdHJva2Utd2lkdGg9IjMiLz4KICAKICA8IS0tIElubmVyIEhleGFnb24gKE1haW4gQmx1ZSBCYWNrZ3JvdW5kKSAtLT4KICA8cG9seWdvbiBwb2ludHM9IjkwLjgzIDEwIDE3MS42NyA1Ni41IDE3MS42NyAxNTMuNSA5MC44MyAyMDAgMTAgMTUzLjUgMTAgNTYuNSA5MC44MyAxMCIgZmlsbD0iIzM0NDk1ZSIgLz4KICAKICA8IS0tIElEIENhcmQgSWNvbiAoRG9jdW1lbnRvIGNvbSBmb3RvKSAtLT4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0OCwgNTUpIj4KICAgIDwhLS0gQ2FyZCBCYXNlIC0tPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9Ijg1IiBoZWlnaHQ9IjYwIiByeD0iNCIgZmlsbD0iI2VjZjBmMSIgLz4KICAgIDxyZWN0IHg9IjAiIHk9IjQ1IiB3aWR0aD0iODUiIGhlaWdodD0iMTUiIHJ4PSIyIiBmaWxsPSIjMjk4MGI5IiBvcGFjaXR5PSIwLjgiIC8+CiAgICAKICAgIDwhLS0gUGhvdG8gQXJlYSAtLT4KICAgIDxyZWN0IHg9IjgiIHk9IjgiIHdpZHRoPSIyMiIgaGVpZ2h0PSIyOCIgcng9IjEiIGZpbGw9IiNiZGMzYzciIC8+CiAgICA8IS0tIFNpbGhvdWV0dGUgaW4gcGhvdG8gLS0+CiAgICA8Y2lyY2xlIGN4PSIxOSIgY3k9IjE4IiByPSI1IiBmaWxsPSIjN2Y4YzhkIiAvPgogICAgPHBhdGggZD0iTTEwLDM0IFExMCwyNSAyOCwyNSBMMjgsMzQgWiIgZmlsbD0iIzdmOGM4ZCIgLz4KICAgIAogICAgPCEtLSBJbmZvIExpbmVzIC0tPgogICAgPHJlY3QgeD0iMzgiIHk9IjEyIiB3aWR0aD0iMzUiIGhlaWdodD0iMyIgcng9IjEiIGZpbGw9IiNiZGMzYzciIC8+CiAgICA8cmVjdCB4PSIzOCIgeT0iMjIiIHdpZHRoPSIzNSIgaGVpZ2h0PSIzIiByeD0iMSIgZmlsbD0iI2JkYzNjNyIgLz4KICAgIDxyZWN0IHg9IjM4IiB5PSIzMiIgd2lkdGg9IjIwIiBoZWlnaHQ9IjMiIHJ4PSIxIiBmaWxsPSIjYmRjM2M3IiAvPgogIDwvZz4KCiAgPCEtLSBQYWNrYWdlIE5hbWUgVGV4dCAtLT4KICA8IS0tIEFkanVzdGVkIHBvc2l0aW9uIHRvIGJlIHNhZmVseSB3aXRoaW4gdGhlIGJsdWUgaW5uZXIgaGV4YWdvbiAtLT4KICA8dGV4dCB4PSI5MC44MyIgeT0iMTY1IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtd2VpZ2h0PSJib2xkIiBmb250LXNpemU9IjE2IiBmaWxsPSIjZmZmZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBsZXR0ZXItc3BhY2luZz0iMC41Ij5kb2N1bWVudG9zYnI8L3RleHQ+Cjwvc3ZnPg==" alt="documentosbr logo" width="200" style="border:none;" />
+</div>
+<div class="row">
+<div class="column">
+<div id="english" class="section level1">
+<h1>English</h1>
+<p>C:/Users/B05497153712/Documents/pRojs/documentosbr/vignettes The
+documentosbr package provides a high-performance suite for validating
+and handling Brazilian administrative records. It currently supports: -
+<strong>CPF</strong> (Individual Taxpayer Registry) -
+<strong>CNPJ</strong> (National Registry of Legal Entities) -
+<strong>PIS</strong> (Social Integration Program) -
+<strong>CNS/CNES</strong> (National Health Card)</p>
+<p>The core is implemented in C++ using Rcpp, allowing for extremely
+fast validation even on datasets with millions of observations.</p>
+<div id="validation-logic" class="section level2">
+<h2>Validation Logic</h2>
+Most Brazilian identifiers use “Module 11” checksums. While CPF and CNPJ
+share similar weighted-sum structures, the <strong>CNS</strong>
+(National Health Card) uses a dynamic algorithm that changes based on
+the starting digit (1-2 or 7-9).
+</div>
+</div>
+</div>
+<div class="column">
+<div id="português" class="section level1">
+<h1>Português</h1>
+<p>O pacote documentosbr oferece uma suíte de alta performance para a
+validação e manipulação de registros administrativos brasileiros.
+Atualmente, o pacote suporta: - <strong>CPF</strong> (Cadastro de Pessoa
+Física) - <strong>CNPJ</strong> (Cadastro Nacional de Pessoa Jurídica) -
+<strong>PIS</strong> (Programa de Integração Social) -
+<strong>CNS/CNES</strong> (Cartão Nacional de Saúde)</p>
+<p>O núcleo é implementado em C++ via Rcpp, permitindo validações
+extremamente rápidas mesmo em bases de dados com milhões de
+observações.</p>
+<div id="lógica-de-validação" class="section level2">
+<h2>Lógica de Validação</h2>
+A maioria dos identificadores brasileiros utiliza o sistema de “Módulo
+11”. Enquanto CPF e CNPJ compartilham estruturas de somas ponderadas
+similares, o <strong>CNS</strong> utiliza um algoritmo dinâmico que
+varia conforme o dígito inicial (1-2 ou 7-9).
+</div>
+</div>
+</div>
+</div>
+<hr>
+<p>Installation / Instalação</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># From CRAN / Via CRAN</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;documentosbr&quot;</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co"># Development version / Versão de desenvolvimento</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co"># remotes::install_github(&quot;rodrigo-borges/documentosbr&quot;)</span></span></code></pre></div>
+<hr>
+<div id="basic-usage-uso-básico" class="section level2">
+<h2>Basic Usage / Uso Básico</h2>
+<div class="row">
+<div class="column">
+The valida_doc() function is the primary interface. It is vectorized and
+highly efficient. Use the type argument to specify the document and log
+= TRUE for detailed error reporting.
+</div>
+<div class="column">
+A função valida_doc() é a interface principal. Ela é vetorizada e
+altamente eficiente. Use o argumento type para especificar o documento e
+log = TRUE para relatórios detalhados de erro.
+</div>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">library</span>(documentosbr)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co"># Vectorized validation / Validação vetorizada</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>cpfs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;12345678901&quot;</span>, <span class="st">&quot;56273869596&quot;</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">valida_doc</span>(cpfs, <span class="at">type =</span> <span class="st">&quot;cpf&quot;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="co"># Health Card (CNS) / Cartão Nacional de Saúde</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="fu">valida_doc</span>(<span class="st">&quot;123456789012345&quot;</span>, <span class="at">type =</span> <span class="st">&quot;cnes&quot;</span>)</span></code></pre></div>
+<hr>
+</div>
+<div id="performance-performance" class="section level2">
+<h2>Performance / Performance</h2>
+<div class="row">
+<div class="column">
+By offloading validation to C++, documentosbr minimizes overhead in ETL
+pipelines, making it suitable for large-scale data cleaning tasks in
+administrative records.
+</div>
+<div class="column">
+Ao delegar a validação para o C++, o documentosbr minimiza o gargalo em
+fluxos de ETL, sendo ideal para tarefas de limpeza de dados em larga
+escala em registros administrativos.
+</div>
+</div>
+<p>Caso se deseja uma saída mais verbosa a função pode ser chamada da
+seguinte forma:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">library</span>(documentosbr)</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">valida_doc</span>(<span class="st">&quot;56273869595&quot;</span>, <span class="at">type =</span> <span class="st">&quot;pis&quot;</span>, <span class="at">log =</span> T)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">dado</th>
+<th align="left">resultado</th>
+<th align="left">erros</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">56273869595</td>
+<td align="left">FALSE</td>
+<td align="left">Primeiro digito errado</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

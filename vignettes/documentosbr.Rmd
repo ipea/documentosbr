@@ -1,0 +1,117 @@
+---
+title: "Introduction to documentosbr / Introdução ao documentosbr"
+author: "Rodrigo Borges"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to documentosbr / Introdução ao documentosbr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+```{r, include=FALSE}
+options(width = "800")
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 7,
+  fig.height = 5
+)
+```
+
+
+<style>
+  .column {float: left;width: 50%;padding: 10px;}
+  .row:after {content: "";display: table;clear: both;}
+  @media screen and (max-width: 600px) {
+    .column { width: 100%; }}
+  body { text-align: justify; }
+  .logo-container {text-align: center;margin-bottom: 20px;}
+  </style>
+  
+  <div class="logo-container"><img src="../man/figures/documentosbr.svg" alt="documentosbr logo" width="200" style="border:none;"/></div>
+  
+  <div class="row"><div class="column">
+  
+# English
+  
+`r getwd()`
+The documentosbr package provides a high-performance suite for validating and handling Brazilian administrative records. It currently supports:
+  - **CPF** (Individual Taxpayer Registry)
+  - **CNPJ** (National Registry of Legal Entities)
+  - **PIS** (Social Integration Program)
+  - **CNS/CNES** (National Health Card)
+  
+The core is implemented in C++ using Rcpp, allowing for extremely fast validation even on datasets with millions of observations.
+  
+## Validation Logic
+  
+Most Brazilian identifiers use "Module 11" checksums. While CPF and CNPJ share similar weighted-sum structures, the **CNS** (National Health Card) uses a dynamic algorithm that changes based on the starting digit (1-2 or 7-9).</div>
+  <div class="column">
+# Português
+
+O pacote documentosbr oferece uma suíte de alta performance para a validação e manipulação de registros administrativos brasileiros. Atualmente, o pacote suporta:
+ - **CPF** (Cadastro de Pessoa Física)
+ - **CNPJ** (Cadastro Nacional de Pessoa Jurídica)
+ - **PIS** (Programa de Integração Social)
+ - **CNS/CNES** (Cartão Nacional de Saúde)
+
+O núcleo é implementado em C++ via Rcpp, permitindo validações extremamente rápidas mesmo em bases de dados com milhões de observações.
+
+## Lógica de Validação
+
+A maioria dos identificadores brasileiros utiliza o sistema de "Módulo 11". Enquanto CPF e CNPJ compartilham estruturas de somas ponderadas similares, o **CNS** utiliza um algoritmo dinâmico que varia conforme o dígito inicial (1-2 ou 7-9).</div></div>
+
+<hr>Installation / Instalação
+
+
+```{r eval = FALSE}
+# From CRAN / Via CRAN
+install.packages("documentosbr")
+
+# Development version / Versão de desenvolvimento
+# remotes::install_github("rodrigo-borges/documentosbr")
+```
+
+
+<hr>
+## Basic Usage / Uso Básico
+<div class="row"><div class="column">
+
+The valida_doc() function is the primary interface. It is vectorized and highly efficient. Use the type argument to specify the document and log = TRUE for detailed error reporting.</div>
+
+<div class="column">
+A função valida_doc() é a interface principal. Ela é vetorizada e altamente eficiente. Use o argumento type para especificar o documento e log = TRUE para relatórios detalhados de erro.</div></div>
+
+
+```{r eval = FALSE}
+library(documentosbr)
+
+# Vectorized validation / Validação vetorizada
+cpfs <- c("12345678901", "56273869596")
+valida_doc(cpfs, type = "cpf")
+
+# Health Card (CNS) / Cartão Nacional de Saúde
+valida_doc("123456789012345", type = "cnes")
+```
+
+
+<hr>
+## Performance / Performance
+<div class="row"><div class="column">By offloading validation to C++, documentosbr minimizes overhead in ETL pipelines, making it suitable for large-scale data cleaning tasks in administrative records.</div><div class="column">Ao delegar a validação para o C++, o documentosbr minimiza o gargalo em fluxos de ETL, sendo ideal para tarefas de limpeza de dados em larga escala em registros administrativos.</div></div>
+
+
+Caso se deseja uma saída mais verbosa a função pode ser chamada da seguinte forma:
+
+```{r}
+library(documentosbr)
+d <- valida_doc("56273869595", type = "pis", log = T)
+
+```
+
+```{r, echo=FALSE}
+knitr::kable(d)
+```
+
+
