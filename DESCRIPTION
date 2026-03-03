@@ -16,7 +16,7 @@ Authors@R: c(
       ),
     person(
       "Rodrigo", "Borges",
-      email = "rodrigoesborges@gmail.com",
+      email = "rodrigo.borges@ipea.gov.br",
       role = c("ctb","cre"),
       comment = c(ORCID = "0000-0003-2076-1424")
       ),
