@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# documentosbr [![Build Status](https://travis-ci.org/ipea/documentosbr.svg?branch=master)](https://travis-ci.org/ipea/documentosbr) [![Cran](https://www.r-pkg.org/badges/version/documentosbr)](https://www.r-pkg.org/badges/version/documentosbr) [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/documentosbr)](https://cranlogs.r-pkg.org/badges/grand-total/documentosbr) [![Coverage Status](https://img.shields.io/codecov/c/github/IPEA/documentosbr/master.svg)](https://app.codecov.io/github/IPEA/documentosbr?branch=master)
+# documentosbr [![Build Status](https://travis-ci.org/ipea/documentosbr.svg?branch=master)](https://travis-ci.org/ipea/documentosbr) [![Cran](https://www.r-pkg.org/badges/version/documentosbr)](https://www.r-pkg.org/badges/version/documentosbr) [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/documentosbr)](https://cranlogs.r-pkg.org/badges/grand-total/documentosbr) [![Coverage Status](https://codecov.io/gh/ipea/documentosbr/graph/badge.svg)](https://app.codecov.io/github/IPEA/documentosbr?branch=master)
 
 ## work in progress
 
