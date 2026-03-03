@@ -30,8 +30,8 @@ Description: Contains functions to validate administrative register as
 License: GPL-3
 Encoding: UTF-8
 LazyData: LazyData: true
-URL: https://github.com/ipea/documentosbr
-BugReports: https://github.com/ipea/documentosbr/issues/
+URL: https://github.com/ipea/documentosbr, https://ssh.github.com/443/ipea
+BugReports: https://ssh.github.com/443/ipea/issues
 Suggests:
     testthat,
     knitr,
