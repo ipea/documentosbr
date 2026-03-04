@@ -36,7 +36,6 @@ knitr::opts_chunk$set(
   
 # English
   
-`r getwd()`
 The documentosbr package provides a high-performance suite for validating and handling Brazilian administrative records. It currently supports:
   - **CPF** (Individual Taxpayer Registry)
   - **CNPJ** (National Registry of Legal Entities)
