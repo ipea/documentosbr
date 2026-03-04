@@ -1,4 +1,6 @@
 # documentosbr 0.1.4
+- Adjusted some non standard urls and reverted to ancestor package references of counts
+- Fixes cran pretest Note
 
 # documentosbr 0.1.3
 person('Rodrigo','Borges', role=c('aut'), email='rodrigo.borges@ipea.gov.br')
