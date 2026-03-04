@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181.67 210" width="200" height="231">
+  <!-- Outer Hexagon (Light Border) -->
+  <polygon points="90.83 1.5 179.67 52.5 179.67 157.5 90.83 208.5 2 157.5 2 52.5 90.83 1.5" fill="#ecf0f1" stroke="#bdc3c7" stroke-width="3"/>
+  
+  <!-- Inner Hexagon (White Background) -->
+  <polygon points="90.83 10 171.67 56.5 171.67 153.5 90.83 200 10 153.5 10 56.5 90.83 10" fill="#ffffff" />
+  
+  <!-- ID Card Icon -->
+  <g transform="translate(48, 55)">
+    <!-- Card Base with subtle border for light background -->
+    <rect x="0" y="0" width="85" height="60" rx="4" fill="#f8f9fa" stroke="#dcdde1" stroke-width="0.5" />
+    <rect x="0" y="45" width="85" height="15" rx="2" fill="#2980b9" opacity="0.9" />
+    
+    <!-- Photo Area -->
+    <rect x="8" y="8" width="22" height="28" rx="1" fill="#bdc3c7" />
+    <!-- Silhouette -->
+    <circle cx="19" cy="18" r="5" fill="#7f8c8d" />
+    <path d="M10,34 Q10,25 28,25 L28,34 Z" fill="#7f8c8d" />
+    
+    <!-- Info Lines -->
+    <rect x="38" y="12" width="35" height="3" rx="1" fill="#bdc3c7" />
+    <rect x="38" y="22" width="35" height="3" rx="1" fill="#bdc3c7" />
+    <rect x="38" y="32" width="20" height="3" rx="1" fill="#bdc3c7" />
+  </g>
+
+  <!-- Package Name (Dark Text) -->
+  <text x="90.83" y="165" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#2c3e50" text-anchor="middle" letter-spacing="0.5">documentosbr</text>
+</svg>

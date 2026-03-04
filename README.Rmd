@@ -19,6 +19,9 @@ knitr::opts_chunk$set(
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/validaRA?color=blue)](https://CRAN.R-project.org/package=validaRA) [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 
+<img align="right" src="man/figures/documentosbr.svg" alt="logo" width="140"> 
+<img align="right" src="man/figures/documentosbrlight.svg" alt="logolight" width="140">
+
 ## work in progress 
 
 ### NEW:
@@ -37,7 +40,7 @@ This package contains functions to work with brazilian documents ids as CPF, PIS
 ## Installation
 
 
-After CRAN approval, it will be possible install documentosbr from [CRAN](https://cran.r-project.org/web/packages/documentosbr/index.html):
+After CRAN approval, it will be possible to install documentosbr from [CRAN](https://cran.r-project.org/web/packages/documentosbr/index.html):
 
 ```{r eval=FALSE}
 install.packages("documentosbr")

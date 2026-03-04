@@ -16,6 +16,9 @@ experimental](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](ht
 state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
+<img align="right" src="man/figures/documentosbr.svg" alt="logo" width="140">
+<img align="right" src="man/figures/documentosbrlight.svg" alt="logolight" width="140">
+
 ## work in progress
 
 ### NEW:
@@ -37,7 +40,7 @@ generate the last one.
 
 ## Installation
 
-After CRAN approval, it will be possible install documentosbr from
+After CRAN approval, it will be possible to install documentosbr from
 [CRAN](https://cran.r-project.org/web/packages/documentosbr/index.html):
 
 ``` r
