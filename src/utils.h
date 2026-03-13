@@ -13,6 +13,8 @@ Ra * factoryRa(const char *q){
     ra = new Cnpj();
   }else if(t == "cns"){
     ra = new CNS();
+  }else if(t == "cei"){ // <-- ADICIONADO: Regra para instanciar CEI
+    ra = new Cei();
   }else{
     ra = new Cpf();
   }

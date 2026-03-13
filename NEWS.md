@@ -1,8 +1,13 @@
+# documentosbr 0.1.6
+ - Added CEI class for validation of CAEPF registries ancestor
+
 # documentosbr 0.1.5
+ - Fixes for invalid / non canonical URLs in documentation
 
 # documentosbr 0.1.4
-- Adjusted some non standard urls and reverted to ancestor package references of counts
-- Fixes cran pretest Note
+
+ - Adjusted some non standard urls and reverted to ancestor package references of counts
+ - Fixes cran pretest Note
 
 # documentosbr 0.1.3
 person('Rodrigo','Borges', role=c('aut'), email='rodrigo.borges@ipea.gov.br')

@@ -9,5 +9,6 @@
 #include <ra/Pis.hpp>
 #include <ra/CNS.hpp>
 #include <ra/Cnpj.hpp>
+#include <ra/Cei.hpp> // <-- ADICIONADO: Inclusão da nova classe CEI
 
 #endif
