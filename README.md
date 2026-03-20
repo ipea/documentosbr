@@ -41,7 +41,7 @@ generate the last one.
 ## Installation
 
 After CRAN approval, it will be possible to install documentosbr from
-[CRAN](https://cran.r-project.org/web/packages/documentosbr/index.html):
+[CRAN](https://cran.r-project.org/package=documentosbr):
 
 ``` r
 install.packages("documentosbr")
