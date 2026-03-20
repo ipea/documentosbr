@@ -1,3 +1,6 @@
+# documentosbr 0.1.7
+ - Knitted README.md with corrected CRAN URL in canonical form for submission
+
 # documentosbr 0.1.6
  - Added CEI class for validation of CAEPF registries ancestor
 
