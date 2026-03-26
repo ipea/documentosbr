@@ -11,7 +11,7 @@ vignette: >
 
 
 ```{r, include=FALSE}
-old <- getOptions("width")
+old <- getOption("width")
 options(width = "800")
 knitr::opts_chunk$set(
   collapse = TRUE,
