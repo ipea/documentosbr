@@ -102,7 +102,7 @@ valida_doc("123456789012345", type = "cnes")
 <div class="row"><div class="column">By offloading validation to C++, documentosbr minimizes overhead in ETL pipelines, making it suitable for large-scale data cleaning tasks in administrative records.</div><div class="column">Ao delegar a validação para o C++, o documentosbr minimiza o gargalo em fluxos de ETL, sendo ideal para tarefas de limpeza de dados em larga escala em registros administrativos.</div></div>
 
 
-Caso se deseje uma saída mais verbosa a função pode ser chamada da seguinte forma:
+Caso deseje uma saída mais verbosa a função pode ser chamada da seguinte forma:
 
 ```{r}
 library(documentosbr)
