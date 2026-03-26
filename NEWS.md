@@ -1,3 +1,5 @@
+# documentosbr 0.1.8
+ - Fixed minor issues on documentation - remarks on package description and vignettes for complying with CRAN policies.
 # documentosbr 0.1.7
  - Knitted README.md with corrected CRAN URL in canonical form for submission
 
