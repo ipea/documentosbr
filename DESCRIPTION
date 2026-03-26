@@ -28,6 +28,7 @@ Description: Contains functions to validate administrative register as
              PIS (Programa de Integracao Social),
              CNES (Cadastro Nacional de Saude). 
              It can check individual registers or help creating a table summarizing validity of a set.
+             Builds from and improves on previous package from IPEA <https://github.com/ipea/validaRA>
 License: GPL-3
 Encoding: UTF-8
 LazyData: LazyData: true

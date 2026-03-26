@@ -11,6 +11,7 @@ vignette: >
 
 
 ```{r, include=FALSE}
+old <- getOptions("width")
 options(width = "800")
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -111,6 +112,7 @@ d <- valida_doc("56273869595", type = "pis", log = T)
 
 ```{r, echo=FALSE}
 knitr::kable(d)
+options(width = old)
 ```
 
 
