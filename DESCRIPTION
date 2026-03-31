@@ -27,8 +27,8 @@ Description: Contains functions to validate administrative register as
              CPF (Cadastro de Pessoa Fisica), CNPJ (Cadastro de Pessoa Juridica), 
              PIS (Programa de Integracao Social),
              CNES (Cadastro Nacional de Saude). 
+             Builds from and improves on previous package from IPEA validaRA <https://github.com/ipea/validaRA>.
              It can check individual registers or help creating a table summarizing validity of a set.
-             Builds from and improves on previous package from IPEA <https://github.com/ipea/validaRA>
 License: GPL-3
 Encoding: UTF-8
 LazyData: LazyData: true
