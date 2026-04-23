@@ -1,3 +1,6 @@
+# documentosbr 0.2.0
+ - updated CNPJ for new alphanumeric format as of https://www.serpro.gov.br/menu/noticias/videos/calculodvcnpjalfanaumerico.pdf
+
 # documentosbr 0.1.8
  - Fixed minor issues on documentation - remarks on package description and vignettes for complying with CRAN policies.
 # documentosbr 0.1.7

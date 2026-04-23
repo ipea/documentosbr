@@ -57,8 +57,14 @@ int * charxp2arrayint(SEXP x, int *size){
   int t_vec = 0;
   if(v) {
     for(int j = 0; j < len_t; j++){
-      if(isdigit(t[j])){
-        v[t_vec] = t[j] - '0';
+      char c = std::toupper(t[j]); // Garante que letras minúsculas virem maiúsculas
+      
+      // Aceita números (0-9) E letras (A-Z)
+      if(std::isdigit(c) || std::isalpha(c)){
+        // A regra ASCII-48 funciona perfeitamente:
+        // '0' (ASCII 48) - 48 = 0
+        // 'A' (ASCII 65) - 48 = 17
+        v[t_vec] = c - 48;
         t_vec++;
       }
     }
