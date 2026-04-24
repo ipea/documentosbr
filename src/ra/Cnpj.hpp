@@ -7,16 +7,18 @@ public:
   Cnpj(int *digits_value, unsigned int size): Ra(digits_value, size){ size_ra = 14; };
   Cnpj() : Ra() { size_ra = 14; };
   
+  // CORREÇÃO: Deve retornar 13 para que o extrator de REALSXP/double
+  // divida por 10^13 ao separar os 14 dígitos.
   unsigned int sizeRaValidate(){
-    return size_ra - 2; // Valida a base de 12 caracteres
+    return size_ra - 1; 
   }
   
+  // CORREÇÃO: Deve retornar 12 para que o gerador saiba que a base tem 12
   unsigned int sizeRaGenerateLastDigit(){
     return size_ra - 2; 
   }
   
   // Algoritmo unificado para calcular qualquer DV do CNPJ
-  // N é a quantidade de caracteres a avaliar (12 para o DV1, 13 para o DV2)
   int calc_dv(int N) {
     int soma = 0;
     
