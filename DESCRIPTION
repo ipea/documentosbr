@@ -1,7 +1,7 @@
 Package: documentosbr
 Type: Package
 Title: Validate Brazilian Administrative Registers - Valida Documentos 
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: c(
     person(
       "Gustavo",

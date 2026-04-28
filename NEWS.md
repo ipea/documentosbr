@@ -1,3 +1,5 @@
+# documentosbr 0.2.1
+ - updates to documentation
 # documentosbr 0.2.0
  - updated CNPJ for new alphanumeric format as of https://www.serpro.gov.br/menu/noticias/videos/calculodvcnpjalfanaumerico.pdf
 
