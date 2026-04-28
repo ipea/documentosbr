@@ -4,12 +4,13 @@
 # documentosbr
 
 [![check](https://github.com/ipea/documentosbr/actions/workflows/check.yaml/badge.svg)](https://github.com/ipea/documentosbr/actions/workflows/check.yaml)
-[![Cran](https://www.r-pkg.org/badges/version/validaRA)](https://www.r-pkg.org/badges/version/validaRA)
-[![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/validaRA)](https://cranlogs.r-pkg.org/badges/grand-total/validaRA)
+[![Cran](https://www.r-pkg.org/badges/version/documentosbr)](https://www.r-pkg.org/badges/version/documentosbr)
+[![Downloads
+antecessor](https://cranlogs.r-pkg.org/badges/grand-total/validaRA)](https://cranlogs.r-pkg.org/badges/grand-total/validaRA)
 [![Coverage
 Status](https://codecov.io/gh/ipea/documentosbr/graph/badge.svg)](https://app.codecov.io/github/IPEA/documentosbr?branch=master)
 [![CRAN/METACRAN Total
-downloads](https://cranlogs.r-pkg.org/badges/grand-total/validaRA?color=blue)](https://CRAN.R-project.org/package=validaRA)
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/documentosbr?color=blue)](https://CRAN.R-project.org/package=documentosbr)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![Project Status: Active – The project has reached a stable, usable
